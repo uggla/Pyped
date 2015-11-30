@@ -1,6 +1,7 @@
 
 import sys
 import subprocess
+from io import open
 
 from setuptools import setup, Command
 
@@ -25,7 +26,7 @@ setup(
     author_email='kevin.samuel@yandex.com',
     py_modules=['pyped'],
     license='GPL2',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     description="Replace sed/grep/cut/awk by letting you execute Python "
                  "one-liners in your ordinary shell, like perl does.",
     url='http://github.com/ksamuel/Pyped',
